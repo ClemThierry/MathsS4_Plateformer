@@ -7,6 +7,7 @@
 - Apparition d'objet qui font perdre des points
 - Vitesse obstacle en mouvement
 - Nombre de pièces dans coffre
+  - Il pourrait y avoir des enemis dans le coffre parfois (mais très peu de chance)
 
 ## Conseils du prof :
 
