@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounding;
 
     private Rigidbody2D rigidBodyPlayer;
+    private Animator animatorPlayer;
 
 
     private Vector3 velocity = Vector3.zero;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Invoke(nameof(randomByTime), 10f);
         rigidBodyPlayer = GetComponent<Rigidbody2D>();
+        animatorPlayer = GetComponent<Animator>();
         
     }
 
@@ -33,13 +35,16 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rigidBodyPlayer.velocity = new Vector2(moveInput * moveSpeed, rigidBodyPlayer.velocity.y);
 
+        animatorPlayer.SetFloat("Speed", Mathf.Abs(rigidBodyPlayer.velocity.x));
     }
 
     void Update()
     {
         isGrounding = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        animatorPlayer.SetBool("IsJumping", isJumping);
 
-        if(moveInput > 0)
+
+        if (moveInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }else if(moveInput < 0)
@@ -52,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rigidBodyPlayer.velocity = Vector2.up * jumpForce;
+
+
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping == true)

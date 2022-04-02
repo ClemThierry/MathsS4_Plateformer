@@ -5,12 +5,6 @@ public class Chest : MonoBehaviour
     private bool isInRange = false;
 
     public Animator animator;
-
-    void Awake()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isInRange)
