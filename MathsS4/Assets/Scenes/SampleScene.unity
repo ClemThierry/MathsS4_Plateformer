@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  jumpForce: 8
+  jumpForce: 6
   isJumping: 0
   isGrounding: 0
   feetPos: {fileID: 1371813651}
@@ -455,7 +455,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030242443, y: -0.13688755}
+  m_Offset: {x: -0.030242443, y: -0.12976447}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -466,7 +466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.57023716, y: 0.7262249}
+  m_Size: {x: 0.57023716, y: 0.7119788}
   m_EdgeRadius: 0
 --- !u!50 &479190979
 Rigidbody2D:
@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 479190977}
-  offeset: {x: 0, y: 1, z: -10}
-  smoothFactor: 4.52
+  offset: {x: 0, y: 0, z: -10}
+  smoothFactor: 7.19
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

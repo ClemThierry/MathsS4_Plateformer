@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    public Vector3 offeset;
+    public Vector3 offset;
     [Range(2,10)]
     public float smoothFactor;
 
@@ -16,8 +16,8 @@ public class CameraFollow : MonoBehaviour
 
     void Follow()
     {
-        Vector3 targetPosition = target.position + offeset;
+        Vector3 targetPosition = target.position + offset;
         Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor*Time.deltaTime);
-        transform.position = targetPosition;
+        transform.position = smoothPosition;
     }
 }
