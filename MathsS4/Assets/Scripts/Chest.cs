@@ -10,7 +10,7 @@ public class Chest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isInRange)
         {
             OpenChest();
-            Debug.Log("Tu as gagné "+nbCoinWin()+" pièces.");
+            ScoreManager.instance.AddPoints(nbCoinWin());
         }
         
     }
