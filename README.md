@@ -4,8 +4,8 @@
 
 - Longueur du parcours
 - Dégâts inflichés par l'enemi
-- Apparition d'objet qui font perdre des points
-- Vitesse obstacle en mouvement
+- Apparition d'ennemis
+- Vitesse de déplacement de l'ennemi en mouvement
 - Nombre de pièces dans coffre
   - Il pourrait y avoir des enemis dans le coffre parfois (mais très peu de chance)
 
